@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style type="text/css">
+            #top-bar{
+                height:150px;
+                font-color:white;
+                background-color:#D4AFFD;
+                margin:0;
+            }
+            body{
+                margin:0 ;
+                padding:0;
+    
+            }
+            #main-text{
+                font-size:60px;
+                margin:35px;
+                color: white; 
+                font-family: "Brush Script MT", cursive;
+                 text-shadow: 1px 1px 2px #082b34;
+                float:left;}
+    
+            #input{
+                margin-top:35px;
+                margin-left:35px;
+                font-size:25px;
+                color:#A482CC;
+            }   
+    
+            #link{
+                border-radius: 10px;
+                transition: all 0.5s;
+                cursor: pointer;
+                height:40px;
+                width:300px;
+                background-color:#D4AFFD;
+                border:none;
+                radius:10px;
+                margin-left:40px;
+                
+                }
+    
+                #link:hover{
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                    background-color:#A482CC;
+                }
+                #box{
+                    height:30px;
+                    width:300px;
+                    border-radius:7px;
+                    border-color:#D4AFFD;
+                }
+                
+                #l-text{
+                    color:white;
+                    font-size:18px;
+                    text-decoration:none;
+                    font-family: Georgia, arial, serif;
+                }
+               
+        </style>
+    </head>
+    
+        <body>
+            <div id="top-bar">
+                <div id="main-text">Web Helper</div>
+                </div>
+            
+<form action="\url_status" method="POST">
+    {% csrf_token %}
+    <div id="input">Enter Url : <input id="box" type="text" name="message"></div>
+    <br><br>
+    <button id="link" type="submit" onclick="myfunc()"><div id="l-text">Get Url Status</div></button>
+     
+</form>
+</body></html>
