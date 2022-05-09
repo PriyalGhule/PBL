@@ -21,8 +21,8 @@
             float:left;}
 
         #input{
-            margin-top:50px;
-            margin-left:35px;
+            margin-top:40px;
+            margin-left:80px;
             font-size:25px;
             color:#A482CC;
         }   
@@ -36,7 +36,7 @@
             background-color:#D4AFFD;
             border:none;
             radius:10px;
-            margin-left:10px;
+            margin-left:125px;
             margin-top:30px;
             }
 
@@ -82,26 +82,8 @@
                 width:80px;
                 
             }
-            #content{
-                margin-left:150px;
-                margin-right:150px;
-                margin-top:70px;
-            }
-            #content-text{
-                
-                margin-top:30px;
-                font-size:40px;
-                font-family: "Trebuchet MS", Helvetica, sans-serif;
-                
-                
-            }
-            p{
-                font-size:20px;
-                font-family: "Trebuchet MS", Helvetica, sans-serif;
-                color:grey;
-            }
             #side-box{
-                height:200px;
+                height:250px;
                 width:550px;
                 margin-left:210px;
                 margin-top:30px;
@@ -111,6 +93,15 @@
                 border-radius:20px;
                 border-style:solid;
                 
+            }
+            #content{
+                margin-left:150px;
+                margin-right:150px;
+                margin-top:70px;
+            }
+            p{
+                font-size:20px;
+                color:grey;
             }
             #goback{
                 float:right;
@@ -157,18 +148,20 @@
             </div>
             </div>
             <div id="content">
-                <div id="content-text" align="center">Block the entire Internet</div>
-                <p align="center">Block the entire internet if you want to. With your distractions blocked, 
-                    you can get into your workflow and stay on task.Willpower, much like other resources, 
-                    is finite. We only have so much and we use it up fast. Ignoring distractions takes effort
-                     that results in a temporary depletion of willpower. And while we try to ignore it or shut it off,
-                      the digital world is intentionally designed to win the battle.<p>
-       <div  id="side-box" align="center"> <form action="\internet_block" method="POST">
+                <h1 align="center">Block Websites</h1>
+                <p align="center" >Willpower, much like other resources, is finite. We only have so much 
+                    and we use it up fast. Ignoring distractions takes effort that results in a temporary 
+                    depletion of willpower. And while we try to ignore it or shut it off, the digital world 
+                    is intentionally designed to win the battle.Use Web Helper to block distractions so you
+                     can get your work done.Block what you want, when you want, and be more productive.Whether you use Mac, Windows,
+                     Android, iOS, or Chrome, Web Helper will help you sit down to 
+                     work knowing you're completely in control of distractions.</p>
+            <div  id="side-box">
+        <form action="\website_block" method="POST">
         {% csrf_token %}
-        
 
-       
-    <div id="input">Enter time (seconds) : <input id="box" type="text" name="t"></div>
-    <button id="link" type="submit"><div id="l-text">Block Internet</div></form></div></div>
+    <div id="input">Enter URL : <input id="box" type="text" name="url"></div>
+    <div id="input">Enter time (seconds) : <input id="box" type="text" name="ti"></div>
+    <button  id="link" type="submit"><div id="l-text">Block Website</div></form></div></div>
     </body>
     </html>

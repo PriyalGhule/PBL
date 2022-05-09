@@ -21,8 +21,8 @@
                 float:left;}
     
             #input{
-                margin-top:35px;
-                margin-left:35px;
+                margin-top:45px;
+                
                 font-size:25px;
                 color:#A482CC;
             }   
@@ -36,7 +36,7 @@
                 background-color:#D4AFFD;
                 border:none;
                 radius:10px;
-                margin-left:40px;
+                
                 
                 }
     
@@ -57,20 +57,108 @@
                     text-decoration:none;
                     font-family: Georgia, arial, serif;
                 }
+                #top-bar2-text{
+                    margin-top:30px;
+                    margin-left:20px;
+                    font-size:17px;
+                    font-family: "Trebuchet MS", Helvetica, sans-serif;
+                    font-weight:bold;
+                    color:white;
+                    text-decoration:none;
+                }
+                #top-bar2-text:hover{
+                    color:#A482CC;
+                    border-bottom:2px solid;
+            border-color:#A482CC;
+            padding-bottom:2px;
+                }
+                #top-bar2{
+                    height:50px;
+                    background-color:#D4AFFD;
+                    margin-left:500px;
+                    padding-top:30px;
+                    
+                }
+                #tool{
+                    width:80px;
+                    
+                }
+                #side-box{
+                    height:200px;
+                    width:550px;
+                    margin-left:200px;
+                    margin-top:30px;
+                    margin-bottom:30px;
+                    border:2px 2px 2px 2px;
+                    border-color:#D4AFFD;
+                    border-radius:20px;
+                    border-style:solid;
+                    
+                }
+                #content{
+                    margin-left:150px;
+                    margin-right:150px;
+                    
+                }
+
+                #url{
+                    width:60px;
+                    
+                }
+                #goback{
+                    float:right;
+                    margin-right:70px;
+                    
+                    text-decoration:none;
+                    font-size:17px;
+                    margin-top:30px;
+                    border-left:2px  solid white;
+                        border-right:2px  solid white;
+                        border-top:2px  solid white;
+                        border-bottom:2px  solid white;
+                        border-radius:15px;
+                        padding-left:30px;
+                        padding-right:30px;
+                        padding-top:5px;
+                        padding-bottom:5px;
+        
+                    font-weight:bold;
+                    
+                    color:white;
+                    font-family: "Trebuchet MS", Helvetica, sans-serif;
+        
+                }
+                #goback:hover{
+                    color:#A482CC;
+                }
                
         </style>
     </head>
     
         <body>
             <div id="top-bar">
-                <div id="main-text">Web Helper</div>
-                </div>
+                <div id="main-text">Web Helper<img id="tool" src="http://127.0.0.1:8000/static/tool3.png"></div>
+                <div id="top-bar2">
+                    <a href="http://127.0.0.1:8000/homey" id="top-bar2-text">Home</a>
+                    <a href="" id="top-bar2-text">Features</a>
+                    <a href="" id="top-bar2-text">Download</a>
+                    <a href="" id="top-bar2-text">Support</a>
+                    <a href="http://127.0.0.1:8000/signin" id="top-bar2-text">Logout</a>
+                    <a href="http://127.0.0.1:8000/faq" id="top-bar2-text">FAQs</a>
+                    <a id="goback" href="http://127.0.0.1:8000/">Try for free!</a>
+                    
             
+                </div>
+                </div>
+                <div id="content">
+                    <h1 align="center">Get URL status of any website</h1>
+                   
+                <div align="center" id="side-box">       
 <form action="\url_status" method="POST">
     {% csrf_token %}
-    <div id="input">Enter Url : <input id="box" type="text" name="message"></div>
+    <div  id="input">Enter Url : <input id="box" type="text" name="message"></div>
     <br><br>
     <button id="link" type="submit" onclick="myfunc()"><div id="l-text">Get Url Status</div></button>
      
-</form>
+</form></div></div>
 </body></html>
